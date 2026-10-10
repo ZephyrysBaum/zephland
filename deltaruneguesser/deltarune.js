@@ -13,8 +13,9 @@ async function getline() {
         const txt = await $.get('./DELTARUNE.txt');
 
         const lines = txt.split(/\r?\n/).filter(line =>
-            line.trim().split(/\s+/).length >= 2 &&
-            /\b[a-zA-Z]{4,}\b/.test(line)
+            line.trim().split(/\s+/).length >= 3 &&
+            /\b[a-zA-Z]{4,}\b/.test(line) &&
+            !/~[1-9]/.test(line)
         );
 
         if (lines.length === 0) {
