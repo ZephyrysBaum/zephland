@@ -176,7 +176,7 @@ document.getElementById('guess').addEventListener('keydown', event => {
 });
 
 document.getElementById('reset').addEventListener('click', resetGame);
-document.getElementById('next').addEventListener('click', nextguess);
+document.getElementById('nextguess').addEventListener('click', nextguess);
 document.getElementById('hint').addEventListener('click', hint);
 
 
