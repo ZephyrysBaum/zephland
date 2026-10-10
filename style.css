@@ -23,6 +23,7 @@ body {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    background-color: #dda814;
     background-image: url("./background.png");
     background-repeat: repeat;
 
@@ -92,3 +93,29 @@ a {
 .vertgrid {
     display: grid;
 }
+#game {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: #222222;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #dd14d4;
+}
+
