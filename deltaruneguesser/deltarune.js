@@ -58,6 +58,7 @@ async function getline() {
         document.getElementById('guess').disabled = false;
         document.getElementById('submit').disabled = false;
         document.getElementById('hint').disabled = false;
+        document.getElementById('nextguess').disabled = true;
 
         updateCounters();
 
@@ -89,7 +90,7 @@ function checkGuess() {
 
     if (guess.toLowerCase() === answer.toLowerCase()) {
         score++;
-
+        document.getElementById('nextguess').disabled = false;
         if (score > highscore) {
             highscore = score;
             localStorage.setItem('highscore', highscore);
@@ -161,6 +162,11 @@ function resetGame() {
     getline();
 }
 
+function nextguess() {
+    updateCounters();
+    getline();
+}
+
 
 // Event listeners
 document.getElementById('submit').addEventListener('click', checkGuess);
@@ -170,6 +176,7 @@ document.getElementById('guess').addEventListener('keydown', event => {
 });
 
 document.getElementById('reset').addEventListener('click', resetGame);
+document.getElementById('next').addEventListener('click', nextguess);
 document.getElementById('hint').addEventListener('click', hint);
 
 
